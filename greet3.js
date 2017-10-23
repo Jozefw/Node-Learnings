@@ -2,7 +2,7 @@
 function Greetr(){
 	this.title = "jammin",
 	this.Greetingz = function(){
-		console.log("welcome from inside a constructor");
+		console.log("welcome from inside a constructor 3");
 	}
 }
 
