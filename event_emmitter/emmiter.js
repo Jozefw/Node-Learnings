@@ -12,7 +12,16 @@ Emitter.prototype.on = function(type, listener){
 	this.events[type].push(listener);
 }
 
-// events object will look like this
-events = {
-	click: [function(){},function(){}]
+Emitter.prototype.emit = function(type){
+	if(events[type]){
+		events[type].forEach(function(listener){
+			listener();
+		})
+	}
 }
+// events object will look like this
+// events = {
+// 	click: [function(){},function(){}]
+// }
+
+module.exports = Emitter;
